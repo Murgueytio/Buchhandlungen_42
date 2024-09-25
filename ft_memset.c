@@ -10,22 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* MAN: The memset() function fills the first n bytes 
+/* MAN: The memset() function fills the first n bytes
 of the memory area pointed to by s with the constant byte c. And
 returns the number of bytes in the string pointed to by s. */
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
 
-void    *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    unsigned char    *tmp_ptr;
-    
-    tmp_ptr = (unsigned char *) s;
-    while (n > 0)
-    {
-        *(tmp_ptr++) = (unsigned char) c;
-        n--;
-    }
-    return (s);
+	unsigned char	*tmp_ptr;
+
+	tmp_ptr = (unsigned char *) s;
+	while (n > 0)
+	{
+		*(tmp_ptr++) = (unsigned char) c;
+		n--;
+	}
+	return (s);
 }

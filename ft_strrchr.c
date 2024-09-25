@@ -21,22 +21,19 @@ pointer to the terminator.
 #include <string.h>
 #include <stdio.h>
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    unsigned int i;
-    char *res;
-    char cc;
-    
-    cc = (char) c;
-    res = NULL;
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] == cc)
-            res = (char *) &s[i];
-        i++;
-    }
-    if (s[i] == c)
-        res = (char *) &s[i];
-    return (res);
+	const char	*last = NULL;
+	size_t		i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			last = &s[i];
+		i++;
+	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
+	return ((char *)last);
 }

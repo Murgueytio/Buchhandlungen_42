@@ -17,12 +17,12 @@ function returns the number of bytes in the string pointed to by s. */
 #include <string.h>
 #include <stdio.h>
 
-size_t    ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t    i;
-    
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

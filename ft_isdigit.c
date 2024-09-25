@@ -6,7 +6,7 @@
 /*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:48:46 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/20 14:06:53 by oscamurg         ###   ########.fr       */
+/*   Updated: 2024/09/24 14:27:00 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 MAN: isdigit(), checks for a digit (0 through 9).
 The values returned are nonzero if
 the character c falls into the tested class, and zero if not. */
-#include "libft.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <unistd.h>
 
 int	ft_isdigit(int c)
 {
-	if((c >= 48) && (c <= 57))
-	return (1);
-return (0);
-}/*
+	if ((c >= 48) && (c <= 57))
+		return (1);
+	return (0);
+}
+/*
 #include <stdio.h>
 #include "libft.h"
 

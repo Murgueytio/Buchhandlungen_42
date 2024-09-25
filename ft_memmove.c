@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* MAN: The  memmove() function copies n bytes from memory area src 
+/* MAN: The  memmove() function copies n bytes from memory area src
 to memory area dest. The memory areas may overlap: copying takes place
 as though the bytes in src are first copied into a temporary array
 that does not overlap src or dest, and the bytes are then copied
@@ -21,24 +21,26 @@ RETURN VALUE: The memmove() function returns a pointer to dest.
 #include <string.h>
 #include <stdio.h>
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    char    *c_src;
-    char    *c_dest;
-    size_t    i;
-    
-    if (!dest && !src)
-        return (NULL);
-    c_src = (char *) src;
-    c_dest = (char *) dest;
-    i = 0;
-    if (c_dest > c_src)
-        while (n-- > 0)
-            c_dest[n] = c_src[n];
-    else
-    {
-        while (i++ < n)
-            c_dest[i] = c_src[i];
-    }
-    return (dest);
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	d = dest;
+	s = src;
+	if (!dest && !src)
+		return (NULL);
+	if (d < s)
+	{
+		while (n--)
+			*d++ = *s++;
+	}
+	else
+	{
+		d += n;
+		s += n;
+		while (n--)
+			*--d = *--s;
+	}
+	return (dest);
 }

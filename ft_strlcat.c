@@ -12,8 +12,8 @@
 
 /* MAN: The strlcpy() and strlcat() functions copy and concatenate strings
 respectively. They are designed to be safer, more consistent, and less error
-prone replacements for strncpy(3) and strncat(3). Unlike those functions, 
-strlcpy() and strlcat() take the full size of the buffer (not just the length) 
+prone replacements for strncpy(3) and strncat(3). Unlike those functions,
+strlcpy() and strlcat() take the full size of the buffer (not just the length)
 and guarantee to NUL-terminate the result (as long as size is larger than 0 or,
 in the case of strlcat(), as long as there is at least one byte free in dst).
 Note that a byte for the NUL should be included in size. Also note that
@@ -38,21 +38,21 @@ The check exists to prevent potential security problems in incorrect code.
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t    src_len;
-    size_t    dst_len;
-    
-    src_len = ft_strlen(src);
-    dst_len = ft_strlen(dst);
-    if (dst_len >= size)
-        dst_len = size;
-    if (dst_len == size)
-        return (size + src_len);
-    if (src_len < size - dst_len)
-        ft_memcpy(dst + dst_len, src, src_len + 1);
-    else
-    {
-        ft_memcpy(dst + dst_len, src, size - dst_len - 1);
-        dst[size - 1] = '\0';
-    }
-    return (dst_len + src_len);
+	size_t	src_len;
+	size_t	dst_len;
+
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	if (dst_len >= size)
+		dst_len = size;
+	if (dst_len == size)
+		return (size + src_len);
+	if (src_len < size - dst_len)
+		ft_memcpy(dst + dst_len, src, src_len + 1);
+	else
+	{
+		ft_memcpy(dst + dst_len, src, size - dst_len - 1);
+		dst[size - 1] = '\0';
+	}
+	return (dst_len + src_len);
 }

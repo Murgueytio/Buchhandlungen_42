@@ -6,28 +6,24 @@
 /*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:35:47 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/22 10:49:03 by oscamurg         ###   ########.fr       */
+/*   Updated: 2024/09/24 14:37:07 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 /* ASCII (65 - 90) is uppercase and (97 - 122) is lowercase
 In Linux Programmer's Manual:
 isalpha(), checks  for  an  alphabetic character; in the standard "C" locale,
 it is equivalent to (isupper(c) || islower(c)).
 The values returned are nonzero if
 the character c falls into the tested class, and zero if not. */
-#include "libft.h"
 #include <stdio.h>
-#include <ctype.h>
-
 /// @brief 
 /// @param c 
 /// @return 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
-	return (0);	
+	return (0);
 }
 /*
 #include "libft.h"

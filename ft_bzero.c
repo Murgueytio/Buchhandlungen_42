@@ -19,18 +19,18 @@ RETURN VALUE: None.*/
 #include "libft.h"
 // #include <string.h>
 #include <strings.h> // Checking it's working without <string.h>
-/*<strings.h> contains some additional non-standard functions, 
-many of which are obsolete versions of functions that are now in; 
+/*<strings.h> contains some additional non-standard functions,
+many of which are obsolete versions of functions that are now in;
 comes from the BSD branch of Unix evolution and is not standard in C*/
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    char    *tmp_ptr;
-    
-    tmp_ptr = (char *) s;
-    while (n > 0)
-    {
-        *(tmp_ptr++) = 0;
-         n--;
-    }
+	char	*tmp_ptr;
+
+	tmp_ptr = (char *) s;
+	while (n > 0)
+	{
+		*(tmp_ptr++) = 0;
+		n--;
+	}
 }

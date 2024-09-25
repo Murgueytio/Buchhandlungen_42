@@ -15,11 +15,10 @@ it is equivalent to (isalpha(c) || isdigit(c)).
 The values returned are nonzero if
 the character c falls into the tested class, and zero if not. */
 #include "libft.h"
-#include <ctype.h>
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if (ft_isalpha(c) || ft_isdigit(c))
-        return (1);
-    return (0);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }

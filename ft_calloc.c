@@ -33,16 +33,16 @@ or size equal to zero.
 #include <stdlib.h>
 #include <stdio.h>
 
-void    *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    unsigned char *tmp;
-    size_t i;
-    
-    i = 0;
-    tmp = malloc(nmemb * size);
-    if (!tmp)
-        return (NULL);
-    while (i < nmemb * size)
-        tmp[i++] = 0;
-    return (tmp);
+	unsigned char	*tmp;
+	size_t			i;
+
+	i = 0;
+	tmp = malloc(nmemb * size);
+	if (!tmp)
+		return (NULL);
+	while (i < nmemb * size)
+		tmp[i++] = 0;
+	return (tmp);
 }

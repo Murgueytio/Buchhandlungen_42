@@ -12,8 +12,8 @@
 
 /* MAN: The strlcpy() and strlcat() functions copy and concatenate strings
 respectively. They are designed to be safer, more consistent, and less error
-prone replacements for strncpy(3) and strncat(3). Unlike those functions, 
-strlcpy() and strlcat() take the full size of the buffer (not just the length) 
+prone replacements for strncpy(3) and strncat(3). Unlike those functions,
+strlcpy() and strlcat() take the full size of the buffer (not just the length)
 and guarantee to NUL-terminate the result (as long as size is larger than 0 or,
 in the case of strlcat(), as long as there is at least one byte free in dst).
 Note that a byte for the NUL should be included in size. Also note that
@@ -32,17 +32,17 @@ detection simple.
 #include <string.h>
 #include <stdio.h>
 
-size_t    ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    size_t    src_len;
-    
-    src_len = ft_strlen(src);
-    if (src_len + 1 < size)
-        ft_memcpy(dst, src, src_len + 1);
-    else if (size != 0)
-    {
-        ft_memcpy(dst, src, size - 1);
-        dst[size - 1] = 0;
-    }
-    return (src_len);
+	size_t	src_len;
+
+	src_len = ft_strlen(src);
+	if (src_len + 1 < size)
+		ft_memcpy(dst, src, src_len + 1);
+	else if (size != 0)
+	{
+		ft_memcpy(dst, src, size - 1);
+		dst[size - 1] = 0;
+	}
+	return (src_len);
 }

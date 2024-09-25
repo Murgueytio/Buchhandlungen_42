@@ -27,34 +27,31 @@ RETURN VALUE: The converted value or 0 on error.
 #include <stdio.h>
 #include <ctype.h>
 
-int    ft_isspace(int c);
-
-int    ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-    int    result;
-    int    sign;
-    int    i;
-    
-    result = 0;
-    sign = 1;
-    i = 0;
-    while (ft_isspace(nptr[i]))
-        i++;
-    if (nptr[i] == '+' && nptr[i + 1] != '-')
-        i++;
-    if (nptr[i] == '-')
-    {
-        sign = -1;
-        i++;
-    }
-    while (nptr[i] && nptr[i] >= 48 && nptr[i] <= 57)
-    {
-        result *= 10;
-	result += nptr[i] - 48;
-	i++;
-    }
-    result *= sign;
-    return (result);
+	int	result;
+	int	sign;
+	int	i;
+
+	result = 0;
+	sign = 1;
+	i = 0;
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
+		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+		i++;
+	if (nptr[i] == '+' && nptr[i + 1] != '-')
+		i++;
+	if (nptr[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	while (nptr[i] && nptr[i] >= 48 && nptr[i] <= 57)
+	{
+		result = result * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (result * sign);
 }
 
 /* int    ft_isspace(int c)
@@ -68,7 +65,7 @@ int    ft_atoi(const char *nptr)
 int main(void)
 {
     int result;
-    
+
     result = 0;              // result = 0
     result *= 10;            // result = 0
     result += '1' - 48;      // result = 1
