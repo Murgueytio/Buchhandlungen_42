@@ -38,3 +38,7 @@ char	*ft_strdup(const char *s)
 	dest[i] = 0;
 	return (dest);
 }
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strdup("Lydia"));
+// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:26:51 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/18 19:02:56 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-04 15:21:05 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-04 15:21:05 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ It compares only the first (at most) n bytes of s1 and s2.
 RETURN VALUE: If the two strings are the same, the returned result will be 0
 since there is no difference.
 If there is a difference, and the first different character in s2 is greater
-than the character at the same place in s1, the returned result will be negative.
+than the character at the same place in s1, the returned result will be negative
 If there is a difference, and the first different character in s2 is less than
 the character at the same place in s1, the returned result will be positive.
 */
@@ -36,5 +36,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 // int	main(void)
 // {
-// 	printf("%d\n", ft_strncmp("uola", "hol", 3));
+// 	printf("%d\n", ft_strncmp("cgv", "C", 8));
 // }

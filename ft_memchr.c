@@ -41,6 +41,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // {
 // 	char s[50];
 // 	strcpy(s, "Lydia y Oscar");;
-// 	printf("%p\n", ft_memchr(s, 'd', 3));
+// 	printf("%p\n", ft_memchr(s, 'O', 1));
 // 	printf("%s\n", s);
 // }

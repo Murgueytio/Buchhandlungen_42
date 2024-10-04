@@ -132,6 +132,7 @@ int	main()
 	printf("[ft_strdup]\n");
 	printf("%s\n", ft_strdup("Anthony"));
 	printf("\n");
+
 	//STRJOIN
 	printf("[ft_strjoin]\n");
 	char *s56;

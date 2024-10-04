@@ -9,14 +9,6 @@
 /*   Updated: 2024/09/18 18:51:09 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* MAN: The strrchr() function returns a pointer to the last occurrence of the
-character c in the string s.
-RETURN VALUE: The strrchr() function returns a pointer to the matched character
-or NULL if the character is not  found. The terminating null byte is considered
-part of the string, so that if c is specified as '\0', these functions return a
-pointer to the terminator.
-*/
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -38,6 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 // int	main(void)
 // {
 // 	char *p;
-// 	p = ft_strrchr("Barranca", 'o');
+// 	p = ft_strrchr("Barranca", 'a');
 // 	printf("%s\n", p);
 // }

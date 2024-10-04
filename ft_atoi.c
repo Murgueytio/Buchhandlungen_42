@@ -54,24 +54,10 @@ int	ft_atoi(const char *nptr)
 	return (result * sign);
 }
 
-/* int    ft_isspace(int c)
-{
-    if (c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32)
-        return (1);
-    return (0);
-} */
-
-/*
-int main(void)
-{
-    int result;
-
-    result = 0;              // result = 0
-    result *= 10;            // result = 0
-    result += '1' - 48;      // result = 1
-    result *= 10;            // result = 10
-    result += '5' - 48;      // result = 15
-    result *= 10;            // result = 150
-    result += '4' - 48;      // result = 154
-}
-*/
+// int main(void)
+// {
+//     const char *nptr = "   -484";
+//     int result = ft_atoi(nptr);
+//     printf("%d\n", result);
+//     return (0);
+// }
