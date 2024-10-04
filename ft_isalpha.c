@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 13:35:47 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/24 14:37:07 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-04 07:57:57 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-04 07:57:57 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /* ASCII (65 - 90) is uppercase and (97 - 122) is lowercase
 In Linux Programmer's Manual:
 isalpha(), checks  for  an  alphabetic character; in the standard "C" locale,
