@@ -21,24 +21,11 @@ the character c falls into the tested class, and zero if not. */
 /// @return 
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
 /*
-#include "libft.h"
-#include <stdio.h>
-
-/// @brief 
-/// @param  
-/// @return 
-int		main(void)
+int	main(void)
 {
-    printf("Testing ft_isalpha:\n");
-    printf("ft_isalpha('a'): %d\n", ft_isalpha('a'));
-    printf("ft_isalpha('Z'): %d\n", ft_isalpha('Z'));
-    printf("ft_isalpha('5'): %d\n", ft_isalpha('5'));
-    printf("ft_isalpha('$'): %d\n", ft_isalpha('$'));
-
-    return 0;
+	printf("%d\n", ft_isalpha('8'));
+	printf("%d\n", ft_isalpha('G'));
 }*/

@@ -20,9 +20,7 @@ the character c falls into the tested class, and zero if not. */
 
 int	ft_isdigit(int c)
 {
-	if ((c >= 48) && (c <= 57))
-		return (1);
-	return (0);
+	return ((c >= 48) && (c <= 57));
 }
 /*
 #include <stdio.h>
@@ -30,13 +28,6 @@ int	ft_isdigit(int c)
 
 int main(void)
 {
-    printf("ft_isdigit('0') = %d\n", ft_isdigit('0'));
-    printf("ft_isdigit('9') = %d\n", ft_isdigit('9'));
-		return(1);
-    printf("ft_isdigit('a') = %d\n", ft_isdigit('a'));
-    printf("ft_isdigit('$') = %d\n", ft_isdigit('$'));
-		return(0);
-    printf("ft_isdigit(47) = %d\n", ft_isdigit(47));
-    printf("ft_isdigit(58) = %d\n", ft_isdigit(58));
-	    return(0);
+    (ft_isdigit('3')) ? (printf("is digit\n")) : (printf("is not digit\n"));
+	(ft_isdigit('F')) ? (printf("is digit\n")) : (printf("is not digit\n"));
 }*/

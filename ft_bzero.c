@@ -34,3 +34,16 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
+// int main(void)
+// {
+// 	char s[55];
+// 	strcpy(s, "gghg hghJJ 7&");
+// 	ft_bzero(s, 1);
+// 	printf("(%s)\n", s);
+// }
+/*
+Alternativa:
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}*/

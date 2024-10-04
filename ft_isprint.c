@@ -21,7 +21,10 @@ Dec 127 = Char DELL*/
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c < 127)
-		return (1);
-	return (0);
+	return (c >= 32 && c < 127);
 }
+/*
+int main(void)
+{
+	printf("%d\n", ft_isprint('d'));
+}*/

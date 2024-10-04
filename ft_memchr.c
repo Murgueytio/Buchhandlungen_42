@@ -19,8 +19,6 @@ memchr() works with byte string (void *) where strchr() works with 'litteral'
 strings (char *).
 */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -39,3 +37,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+// int	main(void)
+// {
+// 	char s[50];
+// 	strcpy(s, "Lydia y Oscar");;
+// 	printf("%p\n", ft_memchr(s, 'd', 3));
+// 	printf("%s\n", s);
+// }

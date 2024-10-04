@@ -29,8 +29,40 @@ While this may seem somewhat confusing, it was done to make truncation
 detection simple.
 */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	if (size > 0)
+	{
+		while (src[i] && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = 0;
+	}
+	while (src[i])
+		i++;
+	return (i);
+}
+int	main(void)
+{
+	char d[7];
+	const char*s = "Viajando";
+
+	size_t r = ft_strlcpy(d,s,sizeof(d));
+
+	printf("src=%s, dst=%s, ret=%zu\n",s,d,r);
+	return(0);
+}
+/*
+
+
+Alternativa para ft_strlcpy()
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -45,4 +77,29 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[size - 1] = 0;
 	}
 	return (src_len);
+}*/
+/* 
+Alternativa main.c con write
+
+int main(void)
+{
+	char d[8];
+	const char*s = "Viajando";
+	
+	size_t r = ft_strlcpy(d,s,sizeof(d));
+	char b[50];
+	int l = snprintf(b,sizeof(b),"src=%s, dst=%s, ret=%zu\n",s,d,r);
+	write(1,b,l);
+	return(0);
 }
+Alternativa main.c con assert
+
+int main(void)
+{
+	char dst[3];
+	char dst_goal[3] = { 'a', 'b', 'c' };
+	char src[] = "abcdef";
+	char *dst_ptr = strncpy(dst, src, sizeof(dst));
+	assert(dst_ptr == dst);
+	assert(memcmp(dst_goal, dst, sizeof(dst)) == 0);
+}*/

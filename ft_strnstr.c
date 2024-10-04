@@ -45,3 +45,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
+// int	main(void)
+// {
+// 	char s1[50];
+// 	strcpy(s1, "Pachamanca y chicha morada");
+// }

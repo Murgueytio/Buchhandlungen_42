@@ -24,7 +24,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*tmp_dest;
 	unsigned char	*tmp_src;
 
-	if (dest == (void *)0 && src == (void *)0)
+	if (dest == 0 && src == 0)
 		return (dest);
 	tmp_dest = (unsigned char *) dest;
 	tmp_src = (unsigned char *) src;
@@ -35,3 +35,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+// int	main(void)
+// {
+// 	char src1[12], src2[11];
+// 	strcpy(src1, "Lydia");
+// 	strcpy(src2, "Oscar");
+
+// 	ft_memcpy(src1, src2, 2);
+// 	printf("%s\n", src1);
+// 	return (0);
+// }

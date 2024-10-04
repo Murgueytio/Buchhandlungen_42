@@ -14,8 +14,6 @@
 to by s, excluding the terminating null byte ('\0').
 function returns the number of bytes in the string pointed to by s. */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -26,3 +24,9 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
+/*int	main(void)
+{
+	printf("%zu", ft_strlen("  g jh jkhdfj h ugghgh )&g h"));
+	printf("\n");
+}*/

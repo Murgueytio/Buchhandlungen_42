@@ -20,8 +20,6 @@ If there is a difference, and the first different character in s2 is less than
 the character at the same place in s1, the returned result will be positive.
 */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -36,3 +34,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+// int	main(void)
+// {
+// 	printf("%d\n", ft_strncmp("uola", "hol", 3));
+// }

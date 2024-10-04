@@ -18,7 +18,11 @@ the character c falls into the tested class, and zero if not. */
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
+/*
+int	main(void)
+{
+	printf("%d\n", ft_isalnum('5'));
+	printf("%d\n", ft_isalnum('%'));
+}*/

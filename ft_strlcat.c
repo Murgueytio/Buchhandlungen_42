@@ -33,6 +33,40 @@ string will not be NUL-terminated (since there was no space for the NUL).
 The check exists to prevent potential security problems in incorrect code.
 */
 #include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	j;
+	size_t	src_len;
+
+	i = 0;
+	j = 0;
+	src_len = 0;
+	while (dst[i] && i < size)
+		i++;
+	while (src[src_len])
+		src_len++;
+	while (src[j] && (i + j + 1) < size)
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	if (i < size)
+		dst[i + j] = '\0';
+	return (i + src_len);
+}
+int	main(void)
+{
+	char d[20] = "Lydia and";
+	const char*s = " Oscar";
+
+	size_t r = ft_strlcat(d,s,sizeof(d));
+	
+	printf("src=%s, dst=%s, ret=%zu\n",s,d,r);
+	return(0);
+}
+/*#include "libft.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -56,3 +90,26 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (dst_len + src_len);
 }
+int	main(void)
+{
+	printf("[ft_strlcat]\n");
+	char s1[50], s2[50];
+	strcpy(s1, "Mr");
+	strcpy(s2, "Robot");
+	printf("%zu\n", ft_strlcat(s1, s2, 4));
+	printf("%s\n", s1);
+	printf("\n");
+}*/
+
+/*
+Alternativa para main.c con write
+int	main(void)
+{
+	char d[20] = "Hello";
+	const char*s = " World";
+	size_t r=ft_strlcat(d,s,sizeof(d));
+	char b[50];
+	int l=snprintf(b,sizeof(b),"src=%s, dst=%s, ret=%zu\n",s,d,r);
+	write(1,b,l);
+	return(0);
+}*/

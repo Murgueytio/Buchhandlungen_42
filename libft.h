@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+//# include <assert.h>
 # include <string.h>
 # include <strings.h> //it uses in bzero
 # include <unistd.h> //is it necessary?

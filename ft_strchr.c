@@ -19,8 +19,6 @@ part of the string, so that if c is specified as '\0', these functions return a
 pointer to the terminator.
 */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -39,3 +37,9 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) &s[i]);
 	return (NULL);
 }
+// int	main(void)
+// {
+// 	char *p;
+// 	p = ft_strchr("Canchapalca Oxapampa", 'o');
+// 	printf("%s\n", p);
+// }

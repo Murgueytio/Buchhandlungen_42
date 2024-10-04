@@ -14,8 +14,6 @@
 of the memory area pointed to by s with the constant byte c. And
 returns the number of bytes in the string pointed to by s. */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -29,3 +27,13 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/*
+int	main(void)
+{
+	char	s[55];
+//I have included "strcpy" because it requires me to separate statements.
+//But, "strcpy" isn't in "libft.h".
+	strcpy(s, "I'm Bond, James Bond");
+	ft_memset(s +3, 'M', 10);
+	printf("%s\n", s);
+}*/

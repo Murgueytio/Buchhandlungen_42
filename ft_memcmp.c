@@ -41,3 +41,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+// int	main(void)
+// {
+// 	char s1[50], s2[50];
+// 	strcpy(s1, "a");
+// 	strcpy(s2, "aaa");
+// 	printf("%d\n", ft_memcmp(s1, s2, 2));
+// }
