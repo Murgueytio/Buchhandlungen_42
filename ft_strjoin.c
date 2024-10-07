@@ -40,3 +40,22 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	n_str[i + j] = '\0';
 	return (n_str);
 }
+// int	main(void)
+// {
+// 	char *s1;
+// 	s1 = ft_strjoin("Ly", "dia");
+// 	printf("%s\n", s1);
+// 	//printf("%lu\n", strlen(s1));
+// }
+
+/* 
+Para que funcione main.c
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+} */

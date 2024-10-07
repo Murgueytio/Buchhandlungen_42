@@ -51,3 +51,13 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+// int main(void)
+// {
+// 	int n;
+// 	char *result;
+
+// 	n = 111;
+// 	result = ft_itoa(n);
+// 	printf("ft_itoa(%d) = %s\n", n, result);
+// }

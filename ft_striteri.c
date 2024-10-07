@@ -24,3 +24,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+// void Lyd(unsigned int i, char *c)
+// {
+//     *c = *c + i;
+// }
+
+// int main(void)
+// {
+//     char s[] = "Lydia";
+
+//     ft_striteri(s, Lyd);
+//     printf("(\"Lydia\") = %s\n", s);
+// }

@@ -30,3 +30,29 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_str[i] = '\0';
 	return (new_str);
 }
+// char Lyd(unsigned int i, char c)
+// {
+//     return (c + i);
+// }
+
+// int main(void)
+// {
+//     char *s;
+//     char *result;
+
+//     s = "Lydia";
+//     result = ft_strmapi(s, Lyd);
+//     printf("(\"%s\") = %s\n", s, result);
+//     free(result);
+// }
+/* 
+Para que funcione main.c
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+} */

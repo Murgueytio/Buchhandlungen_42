@@ -116,6 +116,7 @@ int	main()
 	printf("[ft_putstr_fd]\n");
 	ft_putstr_fd("Muse", 1);	
 	printf("\n");
+
 	//PUTNBR_FD
 	printf("[ft_putnbr_fd]\n");
 	ft_putnbr_fd(-31416, 1);	
@@ -187,6 +188,7 @@ int	main()
 	printf("[ft_strtrim]\n");
 	char *str16 = ft_strtrim("--__-___----4-2-___---__-_-__--", "-_");
 	printf("%s\n", str16);
+
 	//SUBSTR
 	printf("[ft_substr]\n");
 	char *str11 = "Hello 42";

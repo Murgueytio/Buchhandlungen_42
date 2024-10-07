@@ -33,3 +33,27 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n + '0', fd);
 	}
 }
+// int	main(void)
+// {
+// 	ft_putnbr_fd(-007, 1);
+// 	printf("\n");
+// }
+/* void	ft_putstr_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
+}
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+} */
