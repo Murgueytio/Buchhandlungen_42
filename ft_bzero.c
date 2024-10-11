@@ -25,13 +25,13 @@ comes from the BSD branch of Unix evolution and is not standard in C*/
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*tmp_ptr;
+	size_t	i;
 
-	tmp_ptr = (char *) s;
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		*(tmp_ptr++) = 0;
-		n--;
+		*(char *)(s + i) = 0;
+		i++;
 	}
 }
 // int main(void)

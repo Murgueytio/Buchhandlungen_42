@@ -15,17 +15,17 @@ of the memory area pointed to by s with the constant byte c. And
 returns the number of bytes in the string pointed to by s. */
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*tmp_ptr;
+	size_t	i;
 
-	tmp_ptr = (unsigned char *) s;
-	while (n > 0)
+	i = 0;
+	while (i < len)
 	{
-		*(tmp_ptr++) = (unsigned char) c;
-		n--;
+		*(unsigned char *)(b + i) = (unsigned char)c;
+		i++;
 	}
-	return (s);
+	return (b);
 }
 /*
 int	main(void)

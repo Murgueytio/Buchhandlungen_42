@@ -39,36 +39,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // 	printf("src=%s, dst=%s, ret=%zu\n",s,d,r);
 // 	return(0);
 // }
-/*
-
-Alternativa para ft_strlcpy()
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	src_len;
-
-	src_len = ft_strlen(src);
-	if (src_len + 1 < size)
-		ft_memcpy(dst, src, src_len + 1);
-	else if (size != 0)
-	{
-		ft_memcpy(dst, src, size - 1);
-		dst[size - 1] = 0;
-	}
-	return (src_len);
-}*/
-/* 
-Alternativa main.c con write
-
-int main(void)
-{
-	char d[8];
-	const char*s = "Viajando";
-	
-	size_t r = ft_strlcpy(d,s,sizeof(d));
-	char b[50];
-	int l = snprintf(b,sizeof(b),"src=%s, dst=%s, ret=%zu\n",s,d,r);
-	write(1,b,l);
-	return(0);
-}*/

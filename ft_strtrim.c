@@ -10,27 +10,41 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <string.h>
+
+static int	set_contains(char c, char const *set)
+{
+	int	i;
+
+	i = 0;
+	while (*(set + i))
+	{
+		if (*(set + i) == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	end;
-	char	*trimmed;
+	int		i;
+	int		j;
+	char	*res;
 
-	if (!s1 || !set)
+	if (*s1 == '\0')
+		return (ft_strdup(""));
+	i = 0;
+	while (set_contains(*(s1 + i), set))
+		i++;
+	j = ft_strlen(s1) - 1;
+	while (set_contains(*(s1 + j), set))
+		j--;
+	if (i > j)
+		return (ft_strdup(""));
+	res = ft_substr(s1, i, (j - i + 1));
+	if (res == NULL)
 		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	trimmed = (char *)malloc(sizeof(char) * (end - start + 1));
-	if (!trimmed)
-		return (NULL);
-	ft_strlcpy(trimmed, &s1[start], end - start + 1);
-	return (trimmed);
+	return (res);
 }
 
 // int	main(void)
@@ -41,47 +55,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	printf("%s\n", str1);
 // }
 /* Para que funcione main.c
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-char	*ft_strchr(const char *s, int c)
-{
-	unsigned int	i;
-	char			cc;
+ft_strlen ft_strchr ft_strlcpy
 
-	cc = (char) c;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == cc)
-			return ((char *) &s[i]);
-		i++;
-	}
-	if (s[i] == cc)
-		return ((char *) &s[i]);
-	return (NULL);
-}
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	if (size > 0)
-	{
-		while (src[i] && i < (size - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = 0;
-	}
-	while (src[i])
-		i++;
-	return (i);
-} */
+*/

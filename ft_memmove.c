@@ -18,31 +18,32 @@ from the temporary array to dest.
 RETURN VALUE: The memmove() function returns a pointer to dest.
 */
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*temp_dest;
-	const unsigned char	*temp_src;
+	size_t	i;
 
-	temp_dest = (unsigned char *) dest;
-	temp_src = (const unsigned char *) src;
-	if (!dest && !src)
+	if (!dst && !src && len > 0)
 		return (NULL);
-	if (dest < src)
+	if (dst > src)
 	{
-		while (n--)
-			*temp_dest++ = *temp_src++;
+		i = len;
+		while (i > 0)
+		{
+			*(char *)(dst + i - 1) = *(char *)(src + i - 1);
+			i--;
+		}
 	}
 	else
 	{
-		temp_dest += n;
-		temp_src += n;
-		while (n--)
-			*--temp_dest = *--temp_src;
+		i = 0;
+		while (i < len)
+		{
+			*(char *)(dst + i) = *(char *)(src + i);
+			i++;
+		}
 	}
-	return (dest);
+	return (dst);
 }
 // int	main(void)
 // {

@@ -16,24 +16,20 @@ Use memmove(3) if the memory areas do overlap.
 RETURN VALUE: The memcpy() function returns a pointer to dest.
 */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*tmp_dest;
-	unsigned char	*tmp_src;
+	size_t	i;
 
-	if (dest == 0 && src == 0)
-		return (dest);
-	tmp_dest = (unsigned char *) dest;
-	tmp_src = (unsigned char *) src;
-	while (n > 0)
+	i = 0;
+	if (!dst && !src && n > 0)
+		return (NULL);
+	while (i < n)
 	{
-		*(tmp_dest++) = *(tmp_src++);
-		n--;
+		*(char *)(dst + i) = *(char *)(src + i);
+		i++;
 	}
-	return (dest);
+	return (dst);
 }
 // int	main(void)
 // {

@@ -24,25 +24,22 @@ carácter nulo al final.
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	len_d;
+	size_t	len_s;
 	size_t	i;
-	size_t	j;
-	size_t	src_len;
 
+	len_d = ft_strlen(dst);
+	len_s = ft_strlen(src);
+	if (size <= len_d)
+		return (len_s + size);
 	i = 0;
-	j = 0;
-	src_len = 0;
-	while (dst[i] && i < size)
-		i++;
-	while (src[src_len])
-		src_len++;
-	while (src[j] && (i + j + 1) < size)
+	while (src[i] && (len_d + i) < (size - 1))
 	{
-		dst[i + j] = src[j];
-		j++;
+		dst[len_d + i] = src[i];
+		i++;
 	}
-	if (i < size)
-		dst[i + j] = '\0';
-	return (i + src_len);
+	dst[len_d + i] = 0;
+	return (len_d + len_s);
 }
 // int	main(void)
 // {

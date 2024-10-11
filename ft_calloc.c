@@ -30,19 +30,15 @@ or size equal to zero.
 
 */
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*tmp;
-	size_t			i;
+	void	*result;
 
-	i = 0;
-	tmp = malloc(nmemb * size);
-	if (!tmp)
+	result = malloc(count * size);
+	if (!result)
 		return (NULL);
-	while (i < nmemb * size)
-		tmp[i++] = 0;
-	return (tmp);
+	else
+		ft_bzero(result, (count * size));
+	return (result);
 }

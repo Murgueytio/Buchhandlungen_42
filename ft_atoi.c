@@ -29,29 +29,26 @@ RETURN VALUE: The converted value or 0 on error.
 
 int	ft_atoi(const char *nptr)
 {
-	int	result;
-	int	sign;
-	int	i;
+	int	res;
+	int	s;
 
-	result = 0;
-	sign = 1;
-	i = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
-		i++;
-	if (nptr[i] == '+' && nptr[i + 1] != '-')
-		i++;
-	if (nptr[i] == '-')
+	res = 0;
+	s = 1;
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	if (*nptr == '-')
 	{
-		sign = -1;
-		i++;
+		s *= -1;
+		nptr++;
 	}
-	while (nptr[i] && nptr[i] >= 48 && nptr[i] <= 57)
+	else if (*nptr == '+')
+		nptr++;
+	while ('0' <= *nptr && *nptr <= '9')
 	{
-		result = result * 10 + (nptr[i] - 48);
-		i++;
+		res = (res * 10) + (*nptr - '0');
+		nptr++;
 	}
-	return (result * sign);
+	return (res * s);
 }
 
 // int main(void)

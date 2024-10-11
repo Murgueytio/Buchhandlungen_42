@@ -13,22 +13,22 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*new_str;
-	unsigned int	i;
+	char	*res;
+	size_t	i;
+	size_t	len;
 
-	if (!s || !f)
-		return (NULL);
-	new_str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!new_str)
-		return (NULL);
 	i = 0;
-	while (s[i])
+	len = ft_strlen(s);
+	res = malloc (sizeof(char) * (len + 1));
+	if (res == NULL)
+		return (res);
+	while (i < len)
 	{
-		new_str[i] = f(i, s[i]);
+		res[i] = f(i, s[i]);
 		i++;
 	}
-	new_str[i] = '\0';
-	return (new_str);
+	res[i] = '\0';
+	return (res);
 }
 // char Lyd(unsigned int i, char c)
 // {
@@ -47,12 +47,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // }
 /* 
 Para que funcione main.c
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-} */
+ft_strlen(const char *s)
+
+*/

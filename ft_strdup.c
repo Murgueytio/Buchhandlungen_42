@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:34:18 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/18 20:01:27 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-11 09:33:15 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-11 09:33:15 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,19 @@ duplicated string. It returns NULL  if  insufficient memory was available, with
 errno set to indicate the cause of the error.
 */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char *src)
 {
+	int		i;
 	char	*dest;
-	size_t	i;
 
-	dest = (char *) malloc(ft_strlen(s) + 1);
-	if (!dest)
-		return (NULL);
+	dest = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	i = 0;
-	while (s[i])
+	if (dest == 0)
+		return (0);
+	while (src[i])
 	{
-		dest[i] = s[i];
+		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = 0;

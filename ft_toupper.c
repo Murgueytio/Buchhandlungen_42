@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:22:32 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/18 19:30:12 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-11 09:30:26 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-11 09:30:26 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -21,3 +21,4 @@ int	ft_toupper(int c)
 // {
 // 	printf("%c\n", ft_toupper('g'));
 // }
+// Probar c -= 32

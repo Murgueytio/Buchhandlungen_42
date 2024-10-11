@@ -14,28 +14,21 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	size_t	i;
-	size_t	s_len;
+	char	*res;
+	size_t	slen;
 
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
-	if (start >= s_len)
+	slen = ft_strlen(s);
+	if (slen <= start)
 		return (ft_strdup(""));
-	if (len > s_len - start)
-		len = s_len - start;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!substr)
+	if (slen - start < len)
+		len = slen - start;
+	res = (char *) malloc((len + 1) * sizeof(char));
+	if (res == NULL)
 		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	ft_strlcpy(res, (s + start), (len + 1));
+	return (res);
 }
 // int	main(void)
 // {
@@ -45,29 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // }
 /* 
 PARA QUE FUNCIONE EL MAIN
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-char	*ft_strdup(const char *s)
-{
-	char	*dest;
-	size_t	i;
+ft_strlen ft_strdup
 
-	dest = (char *) malloc(ft_strlen(s) + 1);
-	if (!dest)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		dest[i] = s[i];
-		i++;
-	}
-	dest[i] = 0;
-	return (dest);
-} */
+*/

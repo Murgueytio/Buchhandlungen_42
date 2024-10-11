@@ -16,29 +16,16 @@ I write "n_str" as such "new string"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*n_str;
-	size_t	i;
-	size_t	j;
+	int		size;
+	char	*res;
 
-	if (!s1 || !s2)
-		return (NULL);
-	n_str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!n_str)
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		n_str[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j])
-	{
-		n_str[i + j] = s2[j];
-		j++;
-	}
-	n_str[i + j] = '\0';
-	return (n_str);
+	size = 1 + ft_strlen(s1) + ft_strlen(s2);
+	res = (char *) malloc(size * sizeof(char));
+	if (res == 0)
+		return (0);
+	ft_strlcpy(res, s1, size);
+	ft_strlcat(res, s2, size);
+	return (res);
 }
 // int	main(void)
 // {
@@ -50,12 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 /* 
 Para que funcione main.c
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-} */
+ft_strlen(
+
+*/

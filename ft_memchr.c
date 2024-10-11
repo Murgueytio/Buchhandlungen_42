@@ -22,17 +22,13 @@ strings (char *).
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*str;
-	size_t			i;
-	unsigned char	uc;
+	size_t	i;
 
-	str = (unsigned char *) s;
-	uc = (unsigned char) c;
 	i = 0;
 	while (i < n)
 	{
-		if (str[i] == uc)
-			return ((void *) &str[i]);
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s + i));
 		i++;
 	}
 	return (NULL);

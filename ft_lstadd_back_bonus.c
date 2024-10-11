@@ -13,15 +13,68 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*last_node;
+	t_list	*last;
 
-	if (!lst || !new)
+	if (!new || !lst)
 		return ;
 	if (!*lst)
 	{
 		*lst = new;
 		return ;
 	}
-	last_node = ft_lstlast(*lst);
-	last_node->next = new;
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
+/* void	del(void *content)
+{
+	// Función de ejemplo para liberar contenido
+	free(content);
+}
+
+int	main(void)
+{
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+	t_list	*last_node;
+	int		size;
+
+	// Crear nodos
+	node1 = ft_lstnew(ft_strdup("First node"));
+	node2 = ft_lstnew(ft_strdup("Second node"));
+	node3 = ft_lstnew(ft_strdup("Third node"));
+
+	if (!node1 || !node2 || !node3)
+	{
+		printf("Error: failed to allocate memory for nodes\n");
+		return (1);
+	}
+
+	// Añadir node2 al principio de la lista (node2 -> node1)
+	ft_lstadd_front(&node1, node2);
+
+	// Añadir node3 al final de la lista (node2 -> node1 -> node3)
+	ft_lstadd_back(&node1, node3);
+
+	// Mostrar el tamaño de la lista
+	size = ft_lstsize(node1);
+	printf("Size of the list: %d\n", size);
+
+	// Obtener y mostrar el último nodo
+	last_node = ft_lstlast(node1);
+	printf("Last node content: %s\n", (char *)last_node->content);
+
+	// Eliminar el nodo3 (último nodo) de la lista
+	ft_lstdelone(node3, del);
+	size = ft_lstsize(node1);
+	printf("Size after deleting last node: %d\n", size);
+
+	// Limpiar la lista y liberar memoria
+	ft_lstclear(&node1, del);
+	if (!node1)
+	{
+		printf("The list is now empty.\n");
+	}
+
+	return (0);
+} */

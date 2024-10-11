@@ -13,10 +13,10 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s)
-		return ;
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	const char	nl = '\n';
+
+	write(fd, s, ft_strlen(s));
+	write(fd, &nl, 1);
 }
 // int	main(void)
 // {
@@ -24,22 +24,5 @@ void	ft_putendl_fd(char *s, int fd)
 // }
 /* 
 Para que funcione main.c
-void	ft_putstr_fd(char *s, int fd)
-{
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
-}
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-} */
+ft_putstr_fd ft_putchar_fd ft_strlen
+*/

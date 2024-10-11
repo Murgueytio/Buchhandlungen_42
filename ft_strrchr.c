@@ -13,19 +13,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last = NULL;
-	size_t		i;
+	int	i;
 
 	i = 0;
 	while (s[i])
+		i++;
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			last = &s[i];
-		i++;
+			return ((char *)(s + i));
+		i--;
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
-	return ((char *)last);
+	return (0);
 }
 // int	main(void)
 // {

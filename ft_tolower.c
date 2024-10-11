@@ -21,3 +21,4 @@ int	ft_tolower(int c)
 // {
 // 	printf("%c\n", ft_tolower('V'));
 // }
+// Probar c += 32
