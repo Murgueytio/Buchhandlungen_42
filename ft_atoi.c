@@ -9,52 +9,42 @@
 /*   Updated: 2024-10-04 07:57:18 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*MAN: The atoi() function converts the initial portion of the string pointed
-to by nptr to int; it does not detect errors.
-The atoi() function converts a string to its int representation.
-The string passed as parameter may begin with an arbitrary number of whitespaces
-as determined by isspace(3).
-After the arbitrary number of whitespaces, there can be one single optional '+'
-or '-' sign.
-The remainder of the string will be converted to an int, stopping at the first
-character which is not a valid digit in the given base (in our case we only need
-to manage base 10, so the valid digits are 0-9)
-RETURN VALUE: The converted value or 0 on error.
+/*
+r	variable para almacenar el resultado final.
+s   multiplicador que determina el signo del número.
+i   índice para recorre la cadena de caracteres.
 */
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_atoi(const char *nptr)
 {
-	int	res;
+	int	r;
 	int	s;
+	int	i;
 
-	res = 0;
+	r = 0;
 	s = 1;
-	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '-')
+	i = 0;
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '-')
 	{
-		s *= -1;
-		nptr++;
+		s = -1;
+		i++;
 	}
-	else if (*nptr == '+')
-		nptr++;
-	while ('0' <= *nptr && *nptr <= '9')
+	else if (nptr[i] == '+')
 	{
-		res = (res * 10) + (*nptr - '0');
-		nptr++;
+		i++;
 	}
-	return (res * s);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		r = (r * 10) + (nptr[i] - '0');
+		i++;
+	}
+	return (r * s);
 }
-
 // int main(void)
 // {
-//     const char *nptr = "   -484";
-//     int result = ft_atoi(nptr);
-//     printf("%d\n", result);
+//     printf("%d\n", ft_atoi("	-484"));
 //     return (0);
 // }

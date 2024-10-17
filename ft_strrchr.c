@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:25:42 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/18 18:51:09 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-17 14:04:48 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-17 14:04:48 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

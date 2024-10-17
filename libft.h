@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 17:56:56 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/20 17:16:11 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-17 14:06:31 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-17 14:06:31 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdio.h>
 # include <stdlib.h>
-//# include <assert.h>
 # include <string.h>
 # include <strings.h> //it uses in bzero
 # include <unistd.h> //is it necessary?
@@ -58,7 +56,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 //Bonus
-//Definition of list node
+//Definition of list node:
 typedef struct s_list
 {
 	void			*content;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:23:43 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/18 19:30:06 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-17 14:05:49 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-17 14:05:49 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

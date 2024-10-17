@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:20:03 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/22 10:59:45 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-17 12:59:14 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-17 12:59:14 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,13 +29,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-// int	main(void)
-// {
-// 	char d[7];
-// 	const char*s = "Viajando";
+/* int	main(void)
+{
+	char d[7];
+	const char*s = "Viajando";
 
-// 	size_t r = ft_strlcpy(d,s,sizeof(d));
+	size_t r = ft_strlcpy(d,s,sizeof(d));
 
-// 	printf("src=%s, dst=%s, ret=%zu\n",s,d,r);
-// 	return(0);
-// }
+	printf("src=%s, dst=%s, ret=%zu\n",s,d,r);
+	return(0);
+} */

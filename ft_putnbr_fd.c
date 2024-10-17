@@ -27,14 +27,8 @@ void	ft_putnbr_fd(int nb, int fd)
 	nbr = '0' + (n % 10);
 	write(fd, &nbr, 1);
 }
-// int	main(void)
-// {
-// 	ft_putnbr_fd(-007, 1);
-// 	printf("\n");
-// }
-/* 
-Para que funcione main.c
-
-ft_putstr_fd ft_putchar_fd ft_strlen(const char *s)
-
-*/
+/* int	main(void)
+{
+	ft_putnbr_fd(-007, 1);
+	printf("\n");
+} */

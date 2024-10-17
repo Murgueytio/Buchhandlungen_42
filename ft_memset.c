@@ -9,10 +9,6 @@
 /*   Updated: 2024-10-04 07:56:53 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* MAN: The memset() function fills the first n bytes
-of the memory area pointed to by s with the constant byte c. And
-returns the number of bytes in the string pointed to by s. */
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)

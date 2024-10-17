@@ -3,23 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oscamurg <oscamurg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oscamurg <oscamurg@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:21:11 by oscamurg          #+#    #+#             */
-/*   Updated: 2024/09/22 10:59:51 by oscamurg         ###   ########.fr       */
+/*   Created: 2024-10-17 14:03:51 by oscamurg          #+#    #+#             */
+/*   Updated: 2024-10-17 14:03:51 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* En primer while encuentra el final de la cadena dst sin exceder el tamaño 
-size. Si dst es mayor o igual al tamaño del buffer, i será igual a size.
-El segundo while calcula la longitud de src, recorriendo la cadena hasta que
-encuentra el carácter nulo.
-El tercer while copia caracteres de src al final de dst, asegurándose de no
-exceder el tamaño total size - 1, para que siempre quede espacio para el
-carácter nulo al final.
-
-
-*/
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

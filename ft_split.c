@@ -91,3 +91,33 @@ char	**ft_split(const char *s, char c)
 	}
 	return (res);
 }
+/* int	main(void)
+{
+	char	**result;
+	int		i;
+	char	str[] = "Es gibt nur wenige von uns, die Spuren hinterlassen.";
+	char	delimiter = ' ';
+
+	result = ft_split(str, delimiter);
+	if (result == NULL)
+	{
+		printf("Error: Out of memory\n");
+		return (1);
+	}
+
+	i = 0;
+	while (result[i] != NULL)
+	{
+		printf("Word %d: %s\n", i, result[i]);
+		free(result[i]); // Release every word
+		i++;
+	}
+	free(result); // Free the array of pointers
+
+	return (0);
+}
+For it to work main.c
+cc -Wall -Wextra -Werror 
+ft_split.c ft_substr.c ft_strlen.c ft_strdup.c ft_strlcpy.c 
+&& ./a.out
+ */

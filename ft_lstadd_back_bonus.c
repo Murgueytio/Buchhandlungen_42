@@ -32,7 +32,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 }
 
 int	main(void)
-{
+{Murgueytio/Buchhandlungen_42
 	t_list	*node1;
 	t_list	*node2;
 	t_list	*node3;
@@ -77,4 +77,12 @@ int	main(void)
 	}
 
 	return (0);
-} */
+}
+For it to work main.c
+cc -Wall -Wextra -Werror
+ft_lstadd_back_bonus.c ft_lstlast_bonus.c ft_lstnew_bonus.c ft_strdup.c
+ft_strlen.c ft_lstadd_front_bonus.c ft_lstdelone_bonus.c ft_lstsize_bonus.c
+ft_lstclear_bonus.c
+&& ./a.out
+
+ */

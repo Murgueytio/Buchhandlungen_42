@@ -9,9 +9,7 @@
 /*   Updated: 2024-09-22 14:08:34 by oscamurg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-I write "n_str" as such "new string"
-*/
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -19,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		size;
 	char	*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	size = 1 + ft_strlen(s1) + ft_strlen(s2);
 	res = (char *) malloc(size * sizeof(char));
 	if (res == 0)
@@ -27,17 +27,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(res, s2, size);
 	return (res);
 }
-// int	main(void)
-// {
-// 	char *s1;
-// 	s1 = ft_strjoin("Ly", "dia");
-// 	printf("%s\n", s1);
-// 	//printf("%lu\n", strlen(s1));
-// }
-
-/* 
-Para que funcione main.c
-
-ft_strlen(
-
-*/
+/* int	main(void)
+{
+	char *s1;
+	s1 = ft_strjoin("Ly", "dia");
+	printf("%s\n", s1);
+	//printf("%lu\n", strlen(s1));
+} */
